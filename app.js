@@ -10,7 +10,7 @@ function arrLength(arr) {
     return arr.length
 }
 
-console.log(arrLength([]))
+console.log(arrLength([1, 2, 3]))
 
 //3.
 function lastElem(arr) {
@@ -49,7 +49,6 @@ function calcTime(seconds) {
     if (timerMinutes.toString().length === 1) {
         timerMinutes = '0' + timerMinutes
     }
-
     return timerMinutes + ':' + timerSeconds
 }
 
@@ -78,3 +77,21 @@ function reverseString(str) {
 }
 
 console.log(reverseString('This is cool'))
+
+//9. for loop method
+function convertToZero (arr) {
+    let newArr = []
+    for (let i = 0; i < arr.length; ++i){
+        newArr[i] = 0
+    }
+    return newArr;
+}
+
+console.log(convertToZero([1, 2, 3]))
+
+// fill method
+function convertToZero (arr) {
+    return new Array (arr.length).fill(0);
+}
+
+console.log(convertToZero([1, 2, 3]))
