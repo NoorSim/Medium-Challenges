@@ -95,3 +95,37 @@ function convertToZero (arr) {
 }
 
 console.log(convertToZero([1, 2, 3]))
+
+//10. for loop method
+function removeApples (arr) {
+    let noApples = []
+    for (let i = 0; i < arr.length; ++i){
+        if (arr[i] !== 'Apple'){
+            noApples.push(arr[i])
+        }
+    }
+return noApples;
+}
+
+console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']))
+
+// filter method
+function removeApples (arr) {
+    return arr.filter(elem => elem !== 'Apple')
+}
+
+console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']))
+
+
+//11.
+function filterOutFalsy (arr) {
+    let truthyValues = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (!!arr[i] === true){
+            truthyValues.push(arr[i]);
+        }
+    }
+    return truthyValues;
+}
+
+console.log(filterOutFalsy(["", 20, 0, null, undefined, "0"]))
