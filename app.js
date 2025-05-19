@@ -129,3 +129,10 @@ function filterOutFalsy (arr) {
 }
 
 console.log(filterOutFalsy(["", 20, 0, null, undefined, "0"]))
+
+//12.
+function convertToBoolean (arr) {
+    return arr.map (elem => !!elem)
+}
+
+console.log(convertToBoolean([500, 0, "David", "", []]))
